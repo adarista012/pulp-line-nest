@@ -9,7 +9,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(process.env.MONGODB_URI),
+    MongooseModule.forRoot("mongodb+srv://adarista012:0Uy5bMyoIj0FXG9W@clusterpulpo.z5zhr.mongodb.net/?retryWrites=true&w=majority&appName=ClusterPulpo"),
     TransactionModule
     ],
   controllers: [AppController, TransactionController],
