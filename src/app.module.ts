@@ -7,7 +7,7 @@ import { TransactionModule } from './transaction/transaction.module';
 
 @Module({
   imports: [
-    //  ConfigModule.forRoot(
+     ConfigModule.forRoot(), 
       // {
     //   envFilePath: '.env',
     //   isGlobal: true,
