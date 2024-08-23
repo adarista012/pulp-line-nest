@@ -6,7 +6,7 @@ import { Transaction } from 'src/models/transaction.schema';
 
 @Injectable()
 export class TransactionService {
-    constructor(@InjectModel('Transaction.title') private transactionModel: Model<Transaction>){}
+    constructor(@InjectModel('transactions') private transactionModel: Model<Transaction>){}
 
     async create(transaction
         : any){
