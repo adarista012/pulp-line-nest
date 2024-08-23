@@ -3,11 +3,11 @@ import { TransactionService } from './transaction.service';
 
 @Controller('transaction')
 export class TransactionController {
-    constructor(private transactionService: TransactionService){}
+    constructor(private readonly transactionService: TransactionService){}
 
     @Post()
     async create(@Body() createTransaction: any) {
-        return createTransaction;
+        return this.transactionService.create( createTransaction);
         
     }
 

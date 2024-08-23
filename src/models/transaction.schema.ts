@@ -1,7 +1,9 @@
 import {Schema, Prop, SchemaFactory } from '@nestjs/mongoose';
 
 
-@Schema()
+@Schema({
+    timestamps: true
+})
 export class Transaction {
     @Prop({required: true})
     amount: number;
