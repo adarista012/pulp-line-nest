@@ -13,10 +13,8 @@ import { TransactionModule } from './transaction/transaction.module';
     //   isGlobal: true,
     // }
     // ),
-    MongooseModule.forRoot(
-      process.env.MONGODB_URI
-    ),
-    // TransactionModule,
+    MongooseModule.forRoot(process.env.MONGODB_URI),
+    TransactionModule,
     ],
   controllers: [AppController],
   providers: [AppService],
