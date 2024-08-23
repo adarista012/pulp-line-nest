@@ -1,12 +1,17 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose/dist/mongoose.module';
-import { Transaction, TransactionSchema } from 'src/models/transaction_model';
+import { Transaction, TransactionSchema } from 'src/models/transaction.schema';
 
 
-@Module({imports:[
-    MongooseModule.forFeature([{
+
+@Module({
+    imports:[
+    MongooseModule.forFeature([
+        {
         name: Transaction.title,
         schema: TransactionSchema, 
-    }])
-]})
+    }
+    ]) 
+]
+})
 export class TransactionModule {}

@@ -1,20 +1,20 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+// const mongoose = require('mongoose');
+// const { Schema } = mongoose;
 
-const transactionSchema = new Schema(
-  {
-    title: {
-      type: String,
-      require: true,
-    },
-    amount: {
-      type: String,
-      require: true,
-    },
-  },
-  {
-    timestamps: true,
-  }
-);
+// const transactionSchema = new Schema(
+//   {
+//     title: {
+//       type: String,
+//       require: true,
+//     },
+//     amount: {
+//       type: String,
+//       require: true,
+//     },
+//   },
+//   {
+//     timestamps: true,
+//   }
+// );
 
-module.exports = mongoose.model('Transaction', transactionSchema);
+// module.exports = mongoose.model('transaction', transactionSchema);

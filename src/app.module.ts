@@ -3,16 +3,17 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TransactionController } from './transaction/transaction.controller';
 import { TransactionService } from './transaction/transaction.service';
+import { MongooseModule } from '@nestjs/mongoose';
 import { TransactionModule } from './transaction/transaction.module';
 import { ConfigModule } from '@nestjs/config';
-import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
+    ConfigModule.forRoot(),
     MongooseModule.forRoot(process.env.MONGODB_URI),
-    TransactionModule
+    // TransactionModule
     ],
-  controllers: [AppController, TransactionController],
-  providers: [AppService, TransactionService],
+  controllers: [AppController],
+  providers: [AppService],
 })
 export class AppModule {}
